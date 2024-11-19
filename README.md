@@ -8,3 +8,5 @@ Big data class final project
 
 ## Spark cluster
 - Create the spark cluster with the command (you need to be inside the spark_cluster folder): `docker compose up --scale spark-worker=3`
+- Create the spark submit container with the command: `docker run -d --name spark_submit_container --network spark_cluster_default --volumes-from spark_cluster-spark-master-1 -p 4041:4040 spark-submit /bin/bash -c "sleep infinity"`
+
