@@ -7,3 +7,4 @@ Big data class final project
 - You need to have pyspark installed; You can install it with the command: `pip install pyspark` 
 
 ## Spark cluster
+- Create the spark cluster with the command (you need to be inside the spark_cluster folder): `docker compose up --scale spark-worker=3`
