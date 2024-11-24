@@ -47,11 +47,17 @@ Big data class final project
     --topic gps-topic-location3
     ```
 
-- Create the container that's going to have the producer file:
+- Create the container that's going to have the producer file (inside the spark cluster directory):
+    `docker build -t kafka-producer-app ./docker/kafka-producer`
+
+- Run the producer script inside the producer container with the command:
     `docker run -d --name kafka_producer_gps_data --network spark_cluster_default --volumes-from spark_cluster-spark-master-1 kafka-producer-app /bin/bash -c "sleep infinity"`
 
+- (If you already create the produce container just run):
+    `docker start kafka_producer_gps_data`
+
 - Run the producer script whith the command:
-    `docker exec -it kafka_producer_gps_data python3 /opt/spark-apps/kafka_producer/kafka_gps_producer.py --kafka-bootstrap <kafka_cluster> --kafka-topic gps-topic-location`
+    `docker exec -it kafka_producer_gps_data python3 /opt/spark-apps/kafka_producer/kafka_gps_producer.py --kafka-bootstrap <kafka_container> --kafka-topic gps-topic-location`
 
 - Run the consumer file:
     ```bash
