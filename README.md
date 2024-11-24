@@ -8,10 +8,6 @@ Big data class final project
   ```bash
   pip install pyspark
 
-
-Aquí está el archivo completo en formato Markdown, siguiendo tu ejemplo:  
-
-```markdown
 ## Spark Cluster
 - Create the Spark cluster with the command (you need to be inside the `spark_cluster` folder):  
   `docker compose up --scale spark-worker=3`
@@ -50,4 +46,3 @@ Aquí está el archivo completo en formato Markdown, siguiendo tu ejemplo:
     --replication-factor 1 --partitions 1 \
     --topic gps-topic-location3
     ```
-```
