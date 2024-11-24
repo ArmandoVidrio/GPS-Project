@@ -21,23 +21,26 @@ Big data class final project
 `docker compose up -d`
 
 - Create topics for each producer, in this case we have 3 producers:
-- ``` docker exec -it <kafka_cluster> \
-            /opt/kafka/bin/kafka-topics.sh \
-            --create --zookeeper zookeeper:2181 \
-            --replication-factor 1 --partitions 1 \
-            --topic gps-topic-location
-    ```
-- ``` docker exec -it <kafka_cluster> \
-            /opt/kafka/bin/kafka-topics.sh \
-            --create --zookeeper zookeeper:2181 \
-            --replication-factor 1 --partitions 1 \
-            --topic gps-topic-location
-    ```
-- ``` docker exec -it <kafka_cluster> \
-            /opt/kafka/bin/kafka-topics.sh \
-            --create --zookeeper zookeeper:2181 \
-            --replication-factor 1 --partitions 1 \
-            --topic gps-topic-location3
-    ```
+- ``` 
+docker exec -it <kafka_cluster> \
+/opt/kafka/bin/kafka-topics.sh \
+--create --zookeeper zookeeper:2181 \
+--replication-factor 1 --partitions 1 \
+--topic gps-topic-location
+```
+- ``` 
+docker exec -it <kafka_cluster> \
+/opt/kafka/bin/kafka-topics.sh \
+--create --zookeeper zookeeper:2181 \
+--replication-factor 1 --partitions 1 \
+--topic gps-topic-location
+```
+- ``` 
+docker exec -it <kafka_cluster> \
+/opt/kafka/bin/kafka-topics.sh \
+--create --zookeeper zookeeper:2181 \
+--replication-factor 1 --partitions 1 \
+--topic gps-topic-location3
+```
 
 
